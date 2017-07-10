@@ -40,7 +40,7 @@ function MutationsService($q, $http, $timeout, $log, AppSettings, $httpParamSeri
     // @todo: handle reject condition
     return new Promise((resolve) => {
 
-      // get all genes and transfrom then into Gene Models
+      // get all genes and transform them into Gene Models
       return $http.get(endpoint(geneQuery))
                   .then(results=>{
                       $log.log(`query::${geneQuery.toUpperCase()}:results.data.total = ${results.data.total}`);
